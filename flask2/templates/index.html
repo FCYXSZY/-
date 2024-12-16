@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+    <!-- 引入 Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 引入 Bootstrap Bundle (包括 Bootstrap JS 和 Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    /* 调整图片尺寸 */
+/* 调整图片尺寸 */
+.carousel-inner img {
+  width: 100%;
+  height: 80vh; /* 设置高度为80%视口高度 */
+  object-fit: contain; /* 保持比例，适应容器 */
+}
+
+/* 让每张图片都有一个容器 */
+.carousel-image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* 描述的样式 */
+.carousel-description {
+  position: absolute;
+  top: -50px; /* 距离图片顶部的距离 */
+  left: 50%;
+  transform: translateX(-50%); /* 将描述文本居中 */
+  background-color: rgba(0, 0, 0, 0.5); /* 背景半透明黑 */
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50px; /* 圆角效果 */
+    line-height: 1.5; /* 使文本在框内垂直居中 */
+  height: 45px; /* 高度自动调整 */
+}
+
+/* 默认图片位置 */
+.carousel-item {
+  position: relative;
+  opacity: 0; /* 默认不可见 */
+  transform: translateX(100%); /* 默认图片在右侧 */
+}
+
+/* 当前图片 */
+.carousel-item.active {
+  opacity: 1; /* 当前图片完全显示 */
+  transform: translateX(0); /* 当前图片在中间 */
+}
+
+/* 下一张图片 (向左平移并放大) */
+.carousel-item-next {
+  opacity: 1;
+  transform: translateX(50%) scale(1.1); /* 让下一张图片稍微放大，向左平移 */
+}
+
+/* 上一张图片 (从左边缩小并向右移动) */
+.carousel-item-prev {
+  opacity: 1;
+  transform: translateX(-50%) scale(0.7); /* 让上一张图片稍微缩小，向右平移 */
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+}
+
+/* 当前图片向左滑动并淡出 */
+.carousel-item-next.active,
+.carousel-item-prev.active {
+  opacity: 0.5; /* 当前图片淡出 */
+  transform: translateX(-100%) scale(0.6); /* 当前图片向左滑动并缩小 */
+}
+
+/* 当前图片向右滑动并淡出 (左侧图片的效果) */
+.carousel-item-prev.active {
+  opacity: 0; /* 淡出 */
+  transform: translateX(100%) scale(0.7); /* 从中间向右平移，缩小 */
+}
+    .scroll-down-text {
+  position: absolute;
+  left: 10px; /* 距离左边的距离 */
+  bottom: 20px; /* 距离图片底部的距离 */
+  font-size: 1.5em; /* 字体大小 */
+  color: white; /* 设置文字颜色为蓝色 */
+  opacity: 0.7; /* 半透明效果 */
+  text-align: center;
+  animation: bounce 1s infinite; /* 添加跳动效果 */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+/* 禁用轮播在鼠标悬停时暂停 */
+.carousel:hover {
+  pointer-events: all; /* 确保鼠标悬停时轮播图仍然响应 */
+}
+.carousel:hover {
+  pointer-events: auto; /* 鼠标悬停时响应鼠标事件 */
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="/"><span>Pixiv插画作品分析</span></a></h1>
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/">首页<i class="la la-angle-down"></i></a></li>
+          <li><a href="/webFlow">网站流量</a></li>
+          <li><a href="/effectScatter">网站评分散点图</a></li>
+          <li><a href="/firstTenWriter">每日Top10作者</a></li>
+          <li><a href="/writer">作家评分变化</a></li>
+          <li><a href="/hotWord">热点标签</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <!-- ======= Carousel Section ======= -->
+    <section id="carousel" class="carousel-section">
+  <div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- 动态加载图片路径 -->
+        {% for image in image_paths %}
+        <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+          <div class="carousel-image-wrapper">
+            <img src="{{ image }}" class="carousel-img main-image" alt="Pixiv Image">
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+     <div class="carousel-description-wrapper">
+        <div class="carousel-description">
+          <p>Pixiv每日TOP10</p>
+        </div>
+      </div>
+    <div class="scroll-down-text">向下滑动</div>
+        <!-- 轮播按钮 -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+            <div class="count-box">
+              <i class="icofont-simple-smile" style="color: #20b38e;"></i>
+              <p>浏览量</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="icofont-document-folder" style="color: #c042ff;"></i>
+              <p>收藏</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="count-box">
+              <i class="icofont-live-support" style="color: #46d1ff;"></i>
+              <p>点赞</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+            <div class="count-box">
+              <i class="icofont-users-alt-5" style="color: #ffb459;"></i>
+              <p>评分</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">Copyright &copy; 2020.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
+      <div class="credits"></div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>

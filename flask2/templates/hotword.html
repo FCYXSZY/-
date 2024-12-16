@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* iframe 样式 */
+    iframe {
+      width: 2400px; /* 设置宽度为100%，使iframe宽度适应容器 */
+      height: 1200px; /* 可以根据需要调整高度 */
+      display: block; /* 使iframe成为块级元素 */
+      margin-left: -200px; /* 使iframe与左侧对齐 */
+      border: none; /* 去除iframe的默认边框 */
+    }
+
+    /* 中间文字样式 */
+   .overlay-text {
+      position: absolute;
+      top: 120px; /* 文字显示在iframe的顶部 */
+      left: 50%;
+      transform: translateX(-50%); /* 使文字居中 */
+      font-size: 30px;  /* 可以调整字体大小 */
+       opacity: 0.6; /* 可以调整透明度 */
+      color: #8fd19e; /* 文字颜色 */
+      font-weight: bold; /* 字体加粗 */
+      z-index: 1; /* 确保文字显示在iframe的内容上面 */
+    }
+
+    .container {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="/"><span>Pixiv插画作品分析</span></a></h1>
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/">首页<i class="la la-angle-down"></i></a></li>
+          <li><a href="/webFlow">网站流量</a></li>
+          <li><a href="/effectScatter">网站评分散点图</a></li>
+          <li><a href="/firstTenWriter">每日Top10作者</a></li>
+          <li><a href="/writer">作家评分变化</a></li>
+          <li><a href="/hotWord">热点标签</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Main Section ======= -->
+  <main id="main">
+      <div class="overlay-text">热点标签</div>
+      <iframe frameborder="0" src="static/hotWord.html" scrolling="No"></iframe>
+    <section class="counts section-bg">
+      <div class="container">
+        <!-- 文字内容 -->
+
+        <!-- iframe -->
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        Copyright &copy; 2020. Company name All rights reserved.
+        <a target="_blank" href="http://sc.chinaz.com/moban/">网站模板</a>
+      </div>
+      <div class="credits"></div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+<script>
+    // 函数：生成随机颜色
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // 为文字设置随机颜色
+    document.getElementById("overlayText").style.color = getRandomColor();
+  </script>
+</body>
+
+</html>
